@@ -1,0 +1,15 @@
+{
+  "name": "snyk-follow-npm",
+  "version": "1.0.0",
+  "description": "echos out newly published packages and their version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Remy Sharp",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "follow": "^0.12.1"
+  }
+}
