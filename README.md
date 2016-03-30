@@ -11,3 +11,11 @@ $ snyk-follow-npm 12345
 ```
 
 The starting sequence point is echo'ed on `STDERR` so that only the package@version is streamed on `STDOUT`.
+
+## Installation
+
+```
+npm i -g snyk-follow-npm
+```
+
+💃
