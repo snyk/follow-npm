@@ -4,12 +4,16 @@
   "description": "echos out newly published packages and their version",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "snyk test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "Remy Sharp",
   "license": "Apache 2.0",
   "dependencies": {
-    "follow": "^0.12.1"
-  }
+    "follow": "^0.12.1",
+    "snyk": "^1.14.3"
+  },
+  "snyk": true
 }
