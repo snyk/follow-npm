@@ -1,4 +1,4 @@
-version: v1.4.0
+version: v1.5.0
 ignore:
   'npm:hawk:20160119':
     - follow > request > hawk:
@@ -8,3 +8,6 @@ patch:
   'npm:request:20160119':
     - follow > request:
         patched: '2016-05-18T01:24:15.146Z'
+  'npm:minimatch:20160620':
+    - snyk > recursive-readdir > minimatch:
+        patched: '2016-07-05T07:30:13.131Z'
