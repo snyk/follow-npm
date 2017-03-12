@@ -1,10 +1,20 @@
-version: v1.4.0
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:hawk:20160119':
     - follow > request > hawk:
         reason: No patch yet
         expires: '2016-06-17T01:24:55.413Z'
+  'npm:qs:20170213':
+    - follow > request > qs:
+        reason: None given
+        expires: '2017-04-11T11:35:13.056Z'
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:request:20160119':
     - follow > request:
         patched: '2016-05-18T01:24:15.146Z'
+  'npm:hawk:20160119':
+    - follow > request > hawk:
+        patched: '2017-03-12T11:35:13.057Z'
