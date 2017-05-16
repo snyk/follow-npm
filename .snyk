@@ -10,6 +10,55 @@ ignore:
     - follow > request > qs:
         reason: None given
         expires: '2017-04-11T11:35:13.056Z'
+    - follow > request > qs:
+        reason: None given
+        expires: '2017-06-15T17:54:09.606Z'
+  'npm:ms:20170412':
+    - follow > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.547Z'
+    - snyk > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.547Z'
+    - snyk > snyk-config > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.547Z'
+    - snyk > snyk-module > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.547Z'
+    - snyk > snyk-policy > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.603Z'
+    - snyk > snyk-resolve > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.604Z'
+    - snyk > snyk-resolve-deps > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.604Z'
+    - snyk > snyk-try-require > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.604Z'
+    - snyk > snyk-policy > snyk-module > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.604Z'
+    - snyk > snyk-policy > snyk-resolve > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.605Z'
+    - snyk > snyk-resolve-deps > snyk-resolve > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.605Z'
+    - snyk > snyk-policy > snyk-try-require > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.605Z'
+    - snyk > snyk-resolve-deps > snyk-try-require > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.605Z'
+    - snyk > snyk-resolve-deps > clite > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.605Z'
+    - snyk > snyk-resolve-deps > snyk-module > debug > ms:
+        reason: None given
+        expires: '2017-06-15T17:54:09.606Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:request:20160119':
