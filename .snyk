@@ -56,6 +56,14 @@ ignore:
     - snyk > snyk-resolve-deps > snyk-module > debug > ms:
         reason: None given
         expires: '2017-06-15T17:54:09.606Z'
+  'npm:http-signature:20150122':
+    - follow > request > http-signature:
+        reason: None given
+        expires: '2017-09-24T09:32:44.056Z'
+  'npm:tunnel-agent:20170305':
+    - follow > request > tunnel-agent:
+        reason: None given
+        expires: '2017-09-24T09:32:44.056Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:request:20160119':
