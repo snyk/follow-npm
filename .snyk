@@ -60,10 +60,16 @@ ignore:
     - follow > request > http-signature:
         reason: None given
         expires: '2017-09-24T09:32:44.056Z'
+    - follow > request > http-signature:
+        reason: None given
+        expires: '2017-10-26T07:31:40.296Z'
   'npm:tunnel-agent:20170305':
     - follow > request > tunnel-agent:
         reason: None given
         expires: '2017-09-24T09:32:44.056Z'
+    - follow > request > tunnel-agent:
+        reason: None given
+        expires: '2017-10-26T07:31:40.296Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:request:20160119':
