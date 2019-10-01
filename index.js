@@ -1,25 +1,20 @@
-var follow = require('follow');
-var fs = require('fs');
+const follow = require('follow');
+const fs = require('fs');
 
-var seqfile = './.seq';
+const seqfile = './.seq';
 
-var stream = fs.createWriteStream(seqfile, {
-  flags: 'r+',
-  defaultEncoding: 'utf8',
+fs.readFile(seqfile, 'utf8', (err, since) => {
+  if (err) {
+    console.error("couldn't read .seq file,", err);
+  }
+  since = process.argv[2] || (since || '').trim() || 'now';
+  console.error('resuming from %s', since);
+  read(since);
 });
 
-stream.on('open', (fd) => {
-  fs.readFile(seqfile, 'utf8', (err, since) => {
-    since = process.argv[2] || (since || '').trim() || 'now';
-    if (since) {
-      console.error('resuming from %s', since);
-    }
-    read(fd, since);
-  });
-});
 
 function read(fd, since) {
-  var feed = new follow.Feed({});
+  const feed = new follow.Feed({});
 
   // You can also set values directly.
   feed.db = 'https://skimdb.npmjs.com/registry';
@@ -29,19 +24,15 @@ function read(fd, since) {
   feed.inactivity_ms = 86400 * 1000;
 
   feed.on('change', (change) => {
-    var doc = change.doc;
-    var time = doc.time.modified;
-    delete doc.time.modified;
-    var updated = Object.keys(doc.time)
-      .filter((k) => doc.time[k] === time)
-      .shift();
-
-    console.log('%s@%s', change.doc.name, updated);
-    fs.write(fd, change.seq, 0, 'utf8'); // update our pointer
+    const doc = change.doc;
+    console.log('%s@%s', doc.name, doc['dist-tags'].latest);
+    if (change.seq) {
+      fs.writeFileSync(seqfile, change.seq); // update our pointer
+    }
   });
 
   feed.on('error', function(er) {
-    console.error('follow had a fatel error');
+    console.error('follow had a fatal error');
     console.error(e.stack);
     throw er;
   });
