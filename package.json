@@ -4,6 +4,7 @@
   "description": "echos out newly published packages and their version",
   "main": "index.js",
   "scripts": {
+    "format": "npx prettier --write index.js",
     "test": "snyk test",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
