@@ -12,7 +12,6 @@ fs.readFile(seqfile, 'utf8', (err, since) => {
   read(since);
 });
 
-
 function read(fd, since) {
   const feed = new follow.Feed({});
 
