@@ -14,7 +14,7 @@
   "license": "Apache 2.0",
   "dependencies": {
     "follow": "^1.1.0",
-    "snyk": "^1.243.0"
+    "snyk": "^1.258.2"
   },
   "snyk": true
 }
